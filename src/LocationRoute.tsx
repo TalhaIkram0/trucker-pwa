@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
-import RoutingMachine from './RoutingMachine';
+import RoutingMachine from './RoutingMachine.tsx';
 import { LatLngLiteral } from 'leaflet';
 import { Coords } from './GeoLocation.tsx';
 import axios from 'axios';
