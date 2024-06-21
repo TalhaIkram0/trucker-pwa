@@ -4,11 +4,11 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
 import RoutingMachine from './RoutingMachine';
 import { LatLngLiteral } from 'leaflet';
-import { Coords } from './GeoLocation';
+import { Coords } from './GeoLocation.tsx';
 import axios from 'axios';
 const startLatLng: LatLngLiteral = { lng: 9.9967015, lat: 53.5447748 };
 
-const LocationMap: React.FC = () => {
+const LocationRoute: React.FC = () => {
   const [pastCoords, setPastCoordsList] = useState<Coords[]>([]);
 
   useEffect(() => {
@@ -55,4 +55,4 @@ const LocationMap: React.FC = () => {
   );
 };
 
-export default LocationMap;
+export default LocationRoute;

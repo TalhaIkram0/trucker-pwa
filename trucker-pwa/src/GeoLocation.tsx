@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useGeolocated } from 'react-geolocated';
 import LocationRoute from './LocationRoute';
 
-interface Coords {
+export interface Coords {
   lat: number;
   lng: number;
   ts?: string;
@@ -19,7 +19,7 @@ const containerStyle: React.CSSProperties = {
     justifyContent: 'center',
     height: '100vh',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#333', // Dark background color
+    backgroundColor: '#242424', // Dark background color
     color: '#fff', // Text color
   };
   
@@ -104,7 +104,7 @@ const GeoLocation: React.FC = () => {
         <div>Geolocation is not enabled</div>
       ) : coords ? (
         <div style={contentStyle}>
-          <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Current Location</h1>
+          <h3 style={{ textAlign: 'center', marginBottom: '20px' }}>Current Location</h3>
           <table style={tableStyle}>
             <tbody>
               <tr>

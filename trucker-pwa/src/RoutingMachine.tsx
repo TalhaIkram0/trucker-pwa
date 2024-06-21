@@ -45,9 +45,9 @@ const RoutingMachine: React.FC<RoutingMachineProps> = ({ locations }) => {
       waypoints,
       routeWhileDragging: false,
       show: false,
-      createMarker: function (i, waypoint, n) {
+      createMarker: function (i: number, waypoint, n: number) {
         return L.marker(waypoint.latLng, {
-          icon: i === 0 ? startIcon : i === n - 1 ? endIcon : null,
+          icon: i === 0 ? startIcon : i === n - 1 ? endIcon : undefined,
         });
       }
     }).addTo(map);
@@ -58,37 +58,6 @@ const RoutingMachine: React.FC<RoutingMachineProps> = ({ locations }) => {
       }
     };
   }, [map, locations]);
-
-  // Example marker icons
-  const startIcon = L.icon({
-    iconUrl: 'path_to_start_icon.png', // Replace with your start icon URL
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    tooltipAnchor: [16, -28],
-    shadowUrl: 'path_to_shadow.png', // Replace with your shadow icon URL
-    shadowSize: [41, 41],
-  });
-
-  const endIcon = L.icon({
-    iconUrl: 'path_to_end_icon.png', // Replace with your end icon URL
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    tooltipAnchor: [16, -28],
-    shadowUrl: 'path_to_shadow.png', // Replace with your shadow icon URL
-    shadowSize: [41, 41],
-  });
-
-  const defaultIcon = L.icon({
-    iconUrl: 'path_to_default_icon.png', // Replace with your default icon URL
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    tooltipAnchor: [16, -28],
-    shadowUrl: 'path_to_shadow.png', // Replace with your shadow icon URL
-    shadowSize: [41, 41],
-  });
 
   return null;
 };
